@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Cancerbero Store | Mitos y Leyendas y juegos de mesa en Mulchén</title>
+  <meta name="description" content="Tienda oficial de Mitos y Leyendas en Mulchén. Torneos, lanzamientos, juegos de mesa, figuras coleccionables y TCG.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:title" content="Cancerbero Store · Mulchén">
+  <meta property="og:description" content="Tienda oficial de Mitos y Leyendas en Mulchén: torneos, lanzamientos, juegos de mesa y figuras coleccionables.">
+  <meta property="og:url" content="https://noirstweb.github.io/Cancerbero-Store-Maqueta/">
+  <meta property="og:image" content="https://noirstweb.github.io/Cancerbero-Store-Maqueta/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="demo-bar">Maqueta de demostración creada por <strong>Noirstweb</strong> para Cancerbero Store · Datos de ejemplo</div>
+
+  <!-- Barra de avisos (edita los textos aquí) -->
+  <div class="announce" aria-label="Avisos">
+    <div class="announce__track">
+      <span>Tienda oficial de Mitos y Leyendas</span>
+      <span>Torneos todas las semanas</span>
+      <span>Premios Top 8 y Top 16 según asistencia</span>
+      <span aria-hidden="true">Tienda oficial de Mitos y Leyendas</span>
+      <span aria-hidden="true">Torneos todas las semanas</span>
+      <span aria-hidden="true">Premios Top 8 y Top 16 según asistencia</span>
+    </div>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Cancerbero Store, inicio">
+        <span class="logo__mark" aria-hidden="true">
+          <!-- Escudo genérico: reemplazar por el logo real (img/logo.png) -->
+          <svg viewBox="0 0 40 46" width="34" height="38"><path d="M20 2 37 8v14c0 11-7 19-17 22C10 41 3 33 3 22V8z" fill="currentColor"/><path d="M12 18l4 4 4-6 4 6 4-4-2 10H14z" fill="#0B1020"/></svg>
+        </span>
+        <span class="logo__text">Cancerbero<small>Store · Mulchén</small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#tienda">Tienda</a>
+        <a href="#torneos">Torneos</a>
+        <a href="#campeones">Campeones</a>
+        <a href="#visitanos">Visítanos</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn--red btn--sm" data-ig="Hola Cancerbero, tengo una consulta." href="#" target="_blank" rel="noopener">Escríbenos</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- ===== Banner principal (las promos se editan en js/main.js → PROMOS) ===== -->
+    <section class="promo" aria-roledescription="carrusel" aria-label="Promociones">
+      <div class="promo__track" id="promoTrack"></div>
+      <button class="promo__arrow promo__arrow--prev" id="promoPrev" aria-label="Promoción anterior">‹</button>
+      <button class="promo__arrow promo__arrow--next" id="promoNext" aria-label="Promoción siguiente">›</button>
+      <div class="promo__dots" id="promoDots" role="tablist" aria-label="Elegir promoción"></div>
+    </section>
+
+    <!-- ===== Cifras ===== -->
+    <div class="stats">
+      <ul class="container stats__inner" aria-label="Cancerbero en números">
+        <li><strong>+300</strong><span>publicaciones de torneos</span></li>
+        <li><strong>Top 8 · Top 16</strong><span>premios por asistencia</span></li>
+        <li><strong>Nacional</strong><span>campeón PBX 2024 de la casa</span></li>
+      </ul>
+    </div>
+
+    <!-- ===== Categorías (se editan en js/main.js → CATEGORIAS) ===== -->
+    <section class="section" id="tienda">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">Tienda</p>
+          <h2>¿Qué estás buscando?</h2>
+        </div>
+        <div class="cats" id="cats"></div>
+      </div>
+    </section>
+
+    <!-- ===== Salón de campeones ===== -->
+    <section class="section" id="campeones">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">Salón de campeones</p>
+          <h2>Los que levantaron el trofeo</h2>
+          <p>Cada torneo deja un campeón. Aquí quedan registrados.</p>
+        </div>
+        <div class="trophies" id="trophies"></div>
+      </div>
+    </section>
+
+    <!-- ===== Torneos ===== -->
+    <section class="section section--alt" id="torneos">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">Calendario</p>
+          <h2>Torneos y lanzamientos</h2>
+          <p>Premios según asistencia para el Top 8 y Top 16. Inscríbete por Instagram y asegura tu cupo.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Tipo de evento" id="tabs">
+          <button role="tab" aria-selected="true" data-type="all">Todos</button>
+          <button role="tab" aria-selected="false" data-type="torneo">Torneos</button>
+          <button role="tab" aria-selected="false" data-type="lanzamiento">Lanzamientos</button>
+        </div>
+        <div class="events" id="events"></div>
+      </div>
+    </section>
+
+    <!-- ===== Team ===== -->
+    <section class="team">
+      <div class="container team__inner">
+        <div>
+          <p class="kicker">Comunidad</p>
+          <h2>Team MyLchen</h2>
+          <p>El equipo de jugadores de la tienda. Entrenamos juntos, viajamos a torneos y representamos a Mulchén en los nacionales.</p>
+        </div>
+        <a class="btn btn--red" data-ig="Hola Cancerbero, quiero saber cómo sumarme al Team MyLchen." href="#" target="_blank" rel="noopener">Quiero sumarme</a>
+      </div>
+    </section>
+
+    <!-- ===== Visítanos ===== -->
+    <section class="section" id="visitanos">
+      <div class="container visit">
+        <div>
+          <p class="kicker">Visítanos</p>
+          <h2>Mulchén, Región del Biobío</h2>
+          <p>Ven a jugar, a abrir sobres o a buscar ese juego de mesa para la familia. Te esperamos.</p>
+          <div class="hero__cta">
+            <a class="btn btn--red" href="https://www.google.com/maps/search/?api=1&query=Cancerbero%20Store%20Mulch%C3%A9n" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn btn--ghost" href="https://www.instagram.com/cancerbero_store/" target="_blank" rel="noopener">@cancerbero_store</a>
+          </div>
+        </div>
+        <div class="hours">
+          <h3>Horario (referencial)</h3>
+          <ul id="hours"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#inicio" class="logo">
+          <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 40 46" width="30" height="34"><path d="M20 2 37 8v14c0 11-7 19-17 22C10 41 3 33 3 22V8z" fill="currentColor"/><path d="M12 18l4 4 4-6 4 6 4-4-2 10H14z" fill="#0B1020"/></svg></span>
+          <span class="logo__text">Cancerbero<small>Store · Mulchén</small></span>
+        </a>
+        <p>Tienda oficial de Mitos y Leyendas. Juegos de mesa, figuras y TCG, con torneos cada semana.</p>
+      </div>
+      <div>
+        <h3>Tienda</h3>
+        <ul id="footCats"></ul>
+      </div>
+      <div>
+        <h3>Comunidad</h3>
+        <ul>
+          <li><a href="#torneos">Torneos y lanzamientos</a></li>
+          <li><a href="#campeones">Salón de campeones</a></li>
+          <li><a data-ig="Hola Cancerbero, quiero saber cómo sumarme al Team MyLchen." href="#">Team MyLchen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/cancerbero_store/" target="_blank" rel="noopener">Instagram @cancerbero_store</a></li>
+          <li><a href="#visitanos">Horario</a></li>
+          <li>Mulchén, Región del Biobío</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> Cancerbero Store</span>
+      <span>Las marcas mencionadas pertenecen a sus respectivos dueños. Torneos y datos de ejemplo.</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
